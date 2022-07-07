@@ -6,12 +6,12 @@
 </h3>
 
 <p align="center">
-    <img alt="Size" src="https://img.shields.io/github/languages/code-size/HELLSNAKES/Music-Slash-Bot">
-    <img alt="Stars" src="https://img.shields.io/github/stars/HELLSNAKES/Music-Slash-Bot">
-    <img alt="Fork" src="https://img.shields.io/github/forks/HELLSNAKES/Music-Slash-Bot">
-    <img alt="Commit" src="https://img.shields.io/github/commit-activity/y/HELLSNAKES/Music-Slash-Bot">
-    <img alt="Version" src="https://img.shields.io/github/package-json/v/HELLSNAKES/Music-Slash-Bot">
-    <img alt="License" src="https://img.shields.io/github/license/HELLSNAKES/Music-Slash-Bot">
+    <img alt="Size" src="https://img.shields.io/github/languages/code-size/JustYourBud/Akaei-Boombox-2">
+    <img alt="Stars" src="https://img.shields.io/github/stars/JustYourBud/Akaei-Boombox-2">
+    <img alt="Fork" src="https://img.shields.io/github/forks/JustYourBud/Akaei-Boombox-2">
+    <img alt="Commit" src="https://img.shields.io/github/commit-activity/y/JustYourBud/Akaei-Boombox-2">
+    <img alt="Version" src="https://img.shields.io/github/package-json/v/JustYourBud/Akaei-Boombox-2">
+    <img alt="License" src="https://img.shields.io/github/license/JustYourBud/Akaei-Boombox-2">
 
 </p>
 
