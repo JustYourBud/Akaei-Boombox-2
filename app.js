@@ -6,7 +6,6 @@ const client = new Client({
     ws: { properties: { $browser: "Discord iOS" } }
 })
 const { readdirSync } = require("fs")
-const moment = require("moment")
 const humanizeDuration = require("humanize-duration")
 const Timeout = new Set()
 client.slash = new Discord.Collection()
@@ -39,48 +38,13 @@ const rest = new REST({ version: "9" }).setToken(process.env.token);
 })
 client.on("ready", () => {
     console.log("\x1b[34m%s\x1b[0m", `Logged in as ${client.user.tag}!`)
-    const statuses = [ // status bot
-        "Hentaiz",
-        `with ${client.guilds.cache.size} servers`,
-        `with ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} users`,
-        "Youtube",
-        "Slash command",
-        "Spotify",
-        "soundcloud",
-        "Twitch"
-    ]
-    let index = 0
-    setInterval(() => {
-        if (index === statuses.length) index = 0
-        const status = statuses[index]
-        client.user.setActivity(`${status}`, {
-            type: "LISTENING",
-            browser: "DISCORD IOS"
-        })
-        index++
-    }, 60000)
+
+    client.user.setActivity("whatever you want!", {
+        type: "LISTENING",
+        browser: "DISCORD IOS"
+    })
 })
-client.on("messageCreate", async (message) => {
-    if (message.attachments.first() !== undefined && message.content !== "") {
-        console.log("\x1b[32m%s\x1b[0m", `[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message.author.username} (${message.author.id}) messaged in ${message.channel.id}: ${message.content}`)
-        console.log("\x1b[32m%s\x1b[0m", `[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message.author.username} (${message.author.id}) sent an attachment in ${message.channel.id}: ${message.attachments.first().url}`)
-    } else if (message.attachments.first() !== undefined && message.content === "") {
-        console.log("\x1b[32m%s\x1b[0m", `[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message.author.username} (${message.author.id}) sent an attachment in ${message.channel.id}: ${message.attachments.first().url}`)
-    } else if (message.attachments.first() === undefined && message.content !== "") {
-        console.log("\x1b[32m%s\x1b[0m", `[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message.author.username} (${message.author.id}) messaged in ${message.channel.id}: ${message.content}`)
-    } else {
-        if (message.embeds.length !== 0) {
-            const a = message.embeds[0]
-            const embed = {}
-            for (const b in a) {
-                if (a[b] != null && (a[b] !== [] && a[b].length !== 0) && a[b] !== {}) {
-                    embed[b] = a[b]
-                }
-            }
-            console.log("\x1b[32m%s\x1b[0m", `[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message.author.username} (${message.author.id}) sent an embed in ${message.channel.id}: ${JSON.stringify(embed, null, 2)}`)
-        }
-    }
-})
+
 client.on("interactionCreate", async (interaction) => {
     if (interaction.isCommand() || interaction.isContextMenu()) {
         if (!client.slash.has(interaction.commandName)) return
@@ -107,24 +71,6 @@ client.on("interactionCreate", async (interaction) => {
             await interaction.reply({ content: ":x: There was an error while executing this command!", ephemeral: true })
         }
     }
-})
-client.on("guildCreate", guild => {
-    const embed = new MessageEmbed()
-        .setTitle("I'm added to a new server")
-        .setThumbnail(client.user.displayAvatarURL())
-        .setDescription(`I'm added to ${guild.name} | ID ${guild.id}\n Server member: ${guild.memberCount}\nTotal server: ${client.guilds.cache.size}`)
-        .setTimestamp()
-    const logchannel = client.channels.cache.get(process.env.Channel_log)
-    logchannel.send({ embeds: [embed] })
-})
-client.on("guildDelete", guild => {
-    const embed = new MessageEmbed()
-        .setTitle("I'm left a new server")
-        .setThumbnail(client.user.displayAvatarURL())
-        .setDescription(`I'm left to ${guild.name} | ID ${guild.id}\n Server member: ${guild.memberCount}\nTotal server: ${client.guilds.cache.size}`)
-        .setTimestamp()
-    const logchannel = client.channels.cache.get(process.env.Channel_log)
-    logchannel.send({ embeds: [embed] })
 })
 // Distube
 const Distube = require("distube")
