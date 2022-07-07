@@ -63,10 +63,6 @@
 
 Released under the [MIT License](https://github.com/HELLSNAKES/Music-Slash-Bot/blob/main/LICENSE)
 
-## Project Activity
-
-![Alt](https://repobeats.axiom.co/api/embed/6e1425a9a3307f0cb5022349e029f034239ed487.svg "Repobeats analytics image")
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people
