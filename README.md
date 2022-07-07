@@ -1,8 +1,9 @@
 <h1 align="center">
    🎧 Akaei Boombox 2 🎧
 </h1>
-
-### Forked from [Music-Slash-Bot](https://github.com/HELLSNAKES/Music-Slash-Bot.git)
+<h3 align="center">
+    Forked from <a href="https://github.com/HELLSNAKES/Music-Slash-Bot.git">Music-Slash-Bot</a>
+</h3>
 
 <p align="center">
     <img alt="Size" src="https://img.shields.io/github/languages/code-size/HELLSNAKES/Music-Slash-Bot">
