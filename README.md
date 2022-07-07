@@ -1,8 +1,9 @@
 <h1 align="center">
-    <a href="#"><img src="https://i.imgur.com/lAqUZaX.gif" width="450" alt="Music-Slash-Bot"></a>
-    
-   🤖 Music-Slash-Bot 🤖
+   🎧 Akaei Boombox 2 🎧
 </h1>
+<h3 align="center">
+    Forked from Music-Slash-Bot
+</h3>
 
 <p align="center">
     <img alt="Size" src="https://img.shields.io/github/languages/code-size/HELLSNAKES/Music-Slash-Bot">
@@ -13,8 +14,6 @@
     <img alt="License" src="https://img.shields.io/github/license/HELLSNAKES/Music-Slash-Bot">
 
 </p>
-
-> Bot invite Url :  **[Link](https://discord.com/api/oauth2/authorize?client_id=898055197102866453&permissions=412320324672&scope=bot%20applications.commands)**
 
 ## Table of content
 
@@ -48,10 +47,6 @@
 - Deploy Heroku :
 
  [![Heroku](https://i.ytimg.com/vi/suCg-Di14Dk/maxresdefault.jpg)](https://youtu.be/suCg-Di14Dk)
- 
-
-- Window :
-> Coming soon
 
 ## Contributing
 1. [Fork the repository](https://github.com/HELLSNAKES/Music-Slash-Bot/fork)
