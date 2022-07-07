@@ -12,7 +12,6 @@ client.slash = new Discord.Collection()
 const { REST } = require("@discordjs/rest")
 const { Routes } = require("discord-api-types/v9")
 const path = require("path")
-const { keepalive } = require("./keepalive")
 const commands = []
 readdirSync("./commands/").map(async dir => {
     readdirSync(`./commands/${dir}/`).map(async (cmd) => {
@@ -146,7 +145,7 @@ client.distube
         queue.autoplay = false
         queue.volume = 50
     })
-keepalive()
+
 if (!process.env.token) {
     console.error("[ERROR]", "Token not found please visit: https://discord.com/developers/application to get token")
     process.exit(0)
